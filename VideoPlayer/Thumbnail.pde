@@ -44,7 +44,10 @@ public class Thumbnail implements UIElement
   {
     // If the video is over we don't want to jump
     if(!player.getIsOver())
+    {
       player.jump(time);
+      player.drawNextFrame(); // Draw the next frame. Useful when the video is paused
+    }
   }
   
   // Draws this element
